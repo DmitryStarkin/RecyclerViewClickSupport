@@ -1,0 +1,9 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
+          package="starsoft.com.rvclicksupport">
+
+    <application android:label="@string/app_name">
+
+    </application>
+
+</manifest>
