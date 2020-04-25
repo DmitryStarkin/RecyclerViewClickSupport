@@ -6,9 +6,21 @@ Source: http://www.littlerobots.nl/blog/Handle-Android-RecyclerView-Clicks/
 
 Usage:
 
-1 add a module to the project
+1 in project level build.gradle add:
+```
+repositories {
+........
+        maven { url "https://jitpack.io" }
+   }
+```
 
-2 in build.gradle write -  implementation project(':rvclicksupport')
+2 in module level build.gradle add:
+```
+dependencies {
+...........
+         implementation 'com.github.DmitryStarkin:RecyclerViewClickSupport:1.1.0'
+   }
+```
 
 3 in code -
 

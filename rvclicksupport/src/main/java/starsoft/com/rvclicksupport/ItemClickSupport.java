@@ -1,23 +1,28 @@
 package starsoft.com.rvclicksupport;
 
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 /*
   Created by StarkinDG on 16.07.2018.
  */
 
-/*
+/**
  Source: http://www.littlerobots.nl/blog/Handle-Android-RecyclerView-Clicks/
- USAGE:
- 
+ for USAGE example
+ * <pre>
+ * <code>
  ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
 @Override
 public void onItemClicked(RecyclerView recyclerView, int position, View v) {
 // do it
 }
 });
- */
+ * <pre>
+ * <code>
+ **/
 
 public class ItemClickSupport {
     
@@ -47,7 +52,7 @@ public class ItemClickSupport {
     };
     private RecyclerView.OnChildAttachStateChangeListener mAttachListener = new RecyclerView.OnChildAttachStateChangeListener() {
         @Override
-        public void onChildViewAttachedToWindow(View view) {
+        public void onChildViewAttachedToWindow(@NonNull View view) {
             
             if (mOnItemClickListener != null) {
                 view.setOnClickListener(mOnClickListener);
@@ -58,7 +63,7 @@ public class ItemClickSupport {
         }
         
         @Override
-        public void onChildViewDetachedFromWindow(View view) {
+        public void onChildViewDetachedFromWindow(@NonNull View view) {
         
         }
     };
